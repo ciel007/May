@@ -1,0 +1,301 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<meta name="format-detection" content="telphone=no" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.js"></script>
+    <!-- Latest compiled and minified Locales -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/locale/bootstrap-table-zh-CN.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+	<link rel="stylesheet" href="css/add3.css">
+</head>
+<!--change-->
+<header>
+    <div > 
+         <nav>  
+            <div id="menu_level1">
+				    <li class="logo"><a href="#" class="logo">Check it out</a></li>
+                </div>
+                <ul id="menu_list">
+                    <li ><a href="LogIn.html">Log In</a></li>
+                    <li ><a href="SignUp.html">Sign Up</a></li>
+                    <li class="current_page"><a href="#">Search Seats</a></li>
+                    <li><a href="personal.html">Person</a></li>
+                </ul>
+		</nav> 
+    </div>   
+</header>
+<!--change--> 
+<body>
+    <div class="container">
+	<div class="row space1"><p>&nbsp; </p></div>
+	<div class="row clearfix">
+		<div class="col-md-12 level1">
+			<div class="introduction">
+			  <h1 class="text-uppercase text-left"><em><strong> Hello! </strong></em></h1>
+			  <div class="row space1"><p>&nbsp; </p></div>
+			  <blockquote>
+			    <p class="text-left text-lowercase"><em> Welcome to Check It Out, this is a website for sharing and updating library seats. It provides a sharing platform for specific student user groups. You can view,upload and update <span>information of</span> <span>seats</span> <span>here. If you have any questions or suggestions, free to contact us by email at XXXX@XXX.edu.xxx.</span> </em></p>
+			  <div class="row space1"><p>&nbsp; </p></div>
+			  </blockquote>
+			  <p class="text-justify text-capitalize">
+			  </p>
+		  </div>
+		  </div>
+    </div>
+	</div>
+	<div class="row space1"><p>&nbsp; </p></div>
+	<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="row sub_2">
+				<div class="col-md-1 left_space">
+				</div>
+				<div class="col-md-10 center_search_box">
+				<!--s-->
+				
+    <div id="page-content" class="animated fadeInRight">
+      <div class="row">
+<form  id="search_User" class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+  <div class="panel-body search_box">
+            <div class="search_p">
+                <div class="row">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        <select class="form-control" id="search_floor" name=""><option value="">Floor</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                        <select class="form-control" id="search_area" name=""><option value="">Area</option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                    <input type="button" class="btn btn-primary btn_search" value="search" onclick="serachUser();changeImage()"/>
+                    </div>
+                </div>
+                </div>
+            </div>
+      </form>
+</div>
+</div>
+<!--table!!-->
+<div class="container">
+	<div class="row searchtable">
+		<div class="col-md-12 searchtablecolum">
+		   <div style="height:auto;" class=" col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+              <div class="tablebox">
+				  <p>this table</p>
+                 <table id="userListTable" ></table>
+              </div>
+            </div>			
+		</div>
+	</div>
+</div>					
+<!--table!!-->					
+<div class="row">
+    <div class="row space1"><p>&nbsp; </p></div>
+    </div>
+    <div id="page-content2" class="animated fadeInRight">
+        <div class="row">
+            <form  id="submit_seat" class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                <div class="panel-body search_box">
+                    <div class="search_p">
+                        <div class="row">
+                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <select class="form-control" id="submit_floor" name=""><option value="">Floor</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <select class="form-control" id="submit_area" name=""><option value="">Area</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="C">C</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <input id="vacant_table" class="form-control" type="password" placeholder="table number" >
+                            </div>
+							<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <select class="form-control" id="submit_floor" name=""><option value="">Seats</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <input type="button" class="btn btn-primary btn_search" value="submit" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+		<div class="row space1"><p>&nbsp; </p></div>
+		<div class="row space1"><p>&nbsp; </p></div>
+		<div class="row space1"><p>&nbsp; </p></div>
+    </div>									
+<div class="rowpic" style="height: 800px;">
+    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
+    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xl-10" id="floor_pic">
+		<div class="row space1"><p>&nbsp; </p></div>
+		
+        <img src="pic/floor3.jpg"  alt="pic" class="img-responsive img-fluid rounded" id ="floorImage" style="height: 100%; width: 100%; ">
+        
+		<div class="row space1"><p>&nbsp; </p></div>
+    </div>
+    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
+</div>
+<script>
+    $(function(){
+        var columns=[
+            {
+                checkbox: true,
+                align: 'center',
+                valign: 'middle',
+            },
+            {
+                title: 'Floor',
+                field: 'floor',
+                align: 'center',
+                valign: 'middle',
+            },
+            {
+                title: 'Area',
+                field: 'area',
+                align: 'center',
+                valign: 'middle',
+            },
+            {
+                title: 'Table',
+                field: 'table',
+                align: 'center',
+            },
+
+            {
+                title: 'Like/Dislike',
+                field: 'rate',
+                align: 'center',
+                formatter:function(value,row,index){
+                    var e = '<button href="#" class="btn btn-primary"  onclick="like(\''+ row.id + '\')">Like</button> ';
+                    var d = '<button href="#" class="btn btn-danger"  onclick="dislike(\''+ row.id +'\')">Dislike</button> ';
+                    return e+d;
+                }
+            }
+        ];
+        a('./data.php',columns);
+
+    });
+    function a (dataurl,columns) {
+        $('#userListTable').bootstrapTable({
+            url: dataurl,
+            method:"post",
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded",
+            striped:true,
+            cache:false,
+            showColumns:false,// column
+//            toobar:'#toolbar',
+            pagination: true, //分页
+            paginationLoop:false,
+            paginationPreText:'previous page',
+            paginationNextText:'next page',
+//            showFooter:true,
+//            showRefresh:true,
+            showPaginationSwitch:false,//if show entries num
+            sortable: false,           //if use sorting
+            singleSelect: false,
+            search:false, //show search
+            buttonsAlign: "right", //button align
+            showRefresh:false,//if show refresh button
+            sidePagination: "server", //server side deal with pagination
+            pageNumber:1,
+            pageSize:5,
+            pageList:[5,10, 25, 50, 100],
+            undefinedText:'--',
+            uniqueId: "id",
+            queryParamsType:'',
+            queryParams: queryParams,//pass parameters
+            columns: columns
+        });
+
+        //得到查询的参数
+        function queryParams (params) {
+            var temp = {  //这里的键的名字和控制器的变量名必须一直，这边改动，控制器也需要改成一样的
+                pageSize: params.pageSize,  //page size
+                pageNumber: params.pageNumber,
+                username: $("#search_username").val(),
+                name:$("#search_name").val(),
+                sex:$("#search_sex").val(),
+                phone:$("#search_mobile").val(),
+                email:$("#search_email").val(),
+            };
+            return temp;
+        };
+    }
+
+
+    function serachUser() {
+        $("#userListTable").bootstrapTable('refresh');
+    }
+
+    function changeImage(img) {
+        //the parameter img here, you need to find a way to pass it.
+        var initialSrc = img.src;
+        $("#floorImage").src = initialSrc;
+    }
+</script>		
+				<div class="row space1"><p>&nbsp; </p></div>	
+				<!--e-->	
+				</div>
+				<div class="col-md-1 right_space">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	
+<div>
+   <div>
+        <footer id="footer-block">
+            <a class="footer-link" href="#">@2018 CKECK IT OUT</a>
+        </footer>
+    </div>
+</div>
+<!--addend-->
+</body>
+										   
+</html>

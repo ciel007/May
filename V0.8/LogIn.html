@@ -1,0 +1,128 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="format-detection" content="telphone=no" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <title>CheckItOut_LogIn</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/add1.css">
+</head>
+<!--change-->
+<header>
+    <div > 
+         <nav>  
+            <div id="menu_level1">
+				    <li class="logo"><a href="#" class="logo">Check it out</a></li>
+                </div>
+                <ul id="menu_list">
+                    <li class="current_page"><a href="LogIn.html">Log In</a></li>
+                    <li><a href="SignUp.html">Sign Up</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="SearchSeats.html">Search Seats</a></li>
+                    <li><a href="personal.html">Person</a></li>
+                </ul>
+		</nav> 
+    </div>   
+</header>
+<!--change--> 
+<body>
+    <div class="container">
+	<div class="row space1"><p>&nbsp; </p></div>
+	<div class="row space1"><p>&nbsp; </p></div>
+	<div class="row space1"><p>&nbsp; </p></div>
+	<div class="row space1"><p>&nbsp; </p></div>
+	<div class="row space1"><p>&nbsp; </p></div>
+	<div class="row space1"><p>&nbsp; </p></div>
+	<div class="row level2">
+		<div class="col-md-2 space_left">
+        <div></div>
+			<p>&nbsp; </p>
+	    </div>
+		<div class="col-md-8 loginbox_center">
+			<form role="form">
+				<p class="block_next_to_email">&nbsp;</p>
+				<div class="form_email">
+					 <div class="col-xs-6 col-sm-10 column">
+					 <div class="input-group">
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email address" name="email" />
+			         </div>
+				     </div>
+				    <div class="col-xs-6 col-sm-2 column">
+					   <div class="input-group-btn dropdown">
+                           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="myBtn">Choose a format</button>
+                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li data-whatever="@student.xjtlu.edu.cn"><a href="#" role="menuitem">@student.xjtlu.edu.cn</a></li>
+                            <li data-whatever="@xjtlu.edu.cn"><a href="#" role="menuitem">@xjtlu.edu.cn</a></li>
+                         </ul>
+                      </div>
+				    </div>
+				</div>
+				<div class="row space1"><p>&nbsp; </p></div>
+				<div class="form-password">
+					 <div class="col-xs-6 col-sm-10 column">
+					 <div class="input-group">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+			         </div>
+				     </div>
+				</div>
+				<div class="form_group_end">
+					
+               <p class="col-xs-6 col-sm-10 block_next_to_password"></p>
+                 <div><div class="forgotpassword_link">
+                 	    <p class="block_next_to_email">&nbsp;</p>
+                       <a href="#"> Forgot Username/Password?</a>
+                 </div></div>
+				<div class="col-xs-6 col-sm-4 rememberme_box">
+					 <label><input type="checkbox" />Remember me</label>
+				</div>
+				<div class="row block_next_to_login_buttons">
+	            </div>
+				<div class="row clearfix">
+		           <div class="col-md-4 column">
+		           </div>
+		           <div class="col-md-4 column">
+				   <button type="submit" class="btn login_buttons">Log In</button>
+		           </div>
+		           <div class="col-md-4 column">
+		           </div>
+	            </div>
+				<div><div class="block_next_to_login_buttons">
+                       <p>&nbsp;</p>
+                 </div></div>
+			   </div>
+			</form>
+		  </div>
+		  <div class="row block_next_to_login_buttons">
+	      </div>
+		 <div class="col-md-2 buttons_next_space"></div>
+	</div>
+</div>
+<script>
+        $("ul").children("li").bind("click",function (event) {
+            var selected = $(this)
+            var format = selected.data("whatever")
+            var mybtn = document.getElementById('myBtn')
+            mybtn.innerHTML= format
+        })
+</script>	
+
+<div >
+   <div>
+        <footer id="footer-block">
+            <a class="footer-link" href="#">@2018 CKECK IT OUT</a>
+        </footer>
+    </div>
+</div>
+<!--addend-->
+</body>
+</html>
